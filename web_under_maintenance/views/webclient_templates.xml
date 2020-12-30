@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+
+        <template id="assets_backend_session" name="session assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/web_under_maintenance/static/src/js/dashboard.js"/>
+                <script type="text/javascript" src="/web_under_maintenance/static/src/js/customize_session.js"/>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

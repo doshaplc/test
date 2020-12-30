@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+
+    <t t-extend="DashboardShare">
+        <t t-jquery=".text-center.o_web_settings_dashboard_share .row .col-md-12" t-operation="append">
+            <t t-set="under_maintenance" t-value="widget.data.under_maintenance"/>
+            <t t-set="show_under_maintenance" t-value="widget.data.show_under_maintenance"/>
+            <t t-set="redirect_url" t-value="widget.redirect_url"/>
+
+            <hr t-if="show_under_maintenance == true"/>
+            <a t-if="show_under_maintenance == true and under_maintenance == false" class="oe_activate_debug_mode pull-right" t-attf-href="/web_under_maintenance/toggle?redirect=#{redirect_url}" >Activate maintenance mode</a>
+            <a t-if="show_under_maintenance == true and under_maintenance == true" class="oe_activate_debug_mode pull-right" t-attf-href="/web_under_maintenance/toggle?redirect=#{redirect_url}" >Deactivate maintenance mode</a>
+        </t>
+    </t>
+
+</templates>

@@ -1,0 +1,10 @@
+<odoo>
+    <data noupdate="1">
+
+        <record id="para_under_maintenance" model="ir.config_parameter">
+            <field name="key">under_maintenance</field>
+            <field name="value" eval="0"/>
+        </record>
+
+    </data>
+</odoo>
